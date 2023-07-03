@@ -1,0 +1,39 @@
+[default]
+exten=611,1,Answer()
+exten=611,n,Ringing
+exten=611,n,Wait()
+exten=611,n,Queue(atencion)
+exten=611,n,Hangup()
+
+exten=600,n,AddQueueMember(atencion | SIP/ext600)
+exten=600,n,Hangup
+
+exten=700,n,AddQueueMember(atencion | SIP/ext700)
+exten=700,n,Hangup
+
+
+;exten=200,1,Dial(SIP/ext200,20)
+;exten=200,n,Answer()
+;exten=200,n,Hangup()
+
+
+;exten=200,2,FollowMe(200,san)
+
+exten=201,1,Dial(SIP/ext201,20)
+;exten=201,n,Answer()
+;exten=201,n,Hangup()
+
+
+exten=202,1,Dial(SIP/ext202,20)
+
+exten=203,1,Dial(SIP/ext203,20)
+exten=203,n,Answer()
+exten=203,n,Hangup()
+
+
+
+exten => 1000,1,NoOp()
+ same =>      n,Answer()
+ same =>      n,Stasis(channel-aa-copia)
+ same =>      n,Hangup()
+

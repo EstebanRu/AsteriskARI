@@ -1,0 +1,49 @@
+[usuario2](!)
+type=friend
+host=dynamic
+context=default
+
+;extension 200
+[ext200](usuario2)
+secret=123
+language=es
+canreinvite=no
+quality = yes
+
+;extension 201
+[ext201](usuario2)
+secret=123
+language=es
+canreinvite=no
+quality = yes
+
+;extension 202
+[ext202](usuario2)
+secret=123
+language=es
+canreinvite=no
+quality = yes
+
+;extension 203
+[ext203](usuario2)
+secret=123
+language=es
+canreinvite=no
+quality = yes
+
+
+;extension 600
+[ext600](usuario2)
+;username=asesor2
+secret=c600
+language=es
+;callerid=600
+;defaultuser=600
+
+;extension 700
+[ext700](usuario2)
+;username=asesor1
+secret=c700
+language=es
+;callerid=700
+;defaultuser=700
